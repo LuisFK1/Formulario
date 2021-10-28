@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="JS/formulario.js"></script>
+    <title>Formulario</title>
+</head>
+
+<body>
+    <main>
+        <h1 id="cambiar">COTIZADOR DE VIAJES</h1>
+        <p>
+            <label for="nombre">NOMBRE CLIENTE</label> <br />
+            <input type="text" name="nombre" placeholder="Nombre(s) Ap. Parter Ap. Materno">
+        </p>
+        <p>
+            <label for="comentarios">CONTACTO DEL CLIENTE</label> <br />
+            <input type="text" name="CONTACT" placeholder="(000)-0000-000">
+        </p>
+
+        <p>
+            <label for="ADULTOS">INGRESE LA CANTIDAD DE ADULTOS</label> <br />
+            <select name="ADULTS">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </p>
+        <p>
+            <label for="NIÑOS">INGRESE LA CANTIDAD DE NIÑOS (0-12 AÑOS)</label> <br />
+            <select name="KIDS">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </p>
+        <p>
+            <label for="DIAS">INGRESE LA CANTIDAD DE DIAS DE ESTANCIA</label> <br />
+            <input type="text" name="ESTANCIA" placeholder="DIAS DE SU ESTANCIA">
+        </p>
+
+        <p>
+            <label for="ESTADO">DESTINO</label> <br />
+            <select name="DESTINO" id="opcion">
+                <option value="AGUASCALIENTES">AGUASCALIENTES</option>
+                <option selected value="BAJA CALIFORNIA">BAJA CALIFORNIA</option>
+                <option value="BAJA CALIFORNIA SUR">BAJA CALIFORNIA SUR</option>
+                <option value="CAMPECHE">CAMPECHE</option>
+                <option value="COLIMA">COLIMA</option>
+                <option value="CHIAPAS">CHIAPAS</option>
+                <option value="CHIHUAHUA">CHIHUAHUA</option>
+                <option value="DURANGO">DURANGO</option>
+                <option value="DISTRITO FEDERAL">DISTRITO FEDERAL</option>
+                <option value="GUANAJUATO">GUANAJUATO</option>
+                <option value="GUERRERO">GUERRERO</option>
+                <option value="HIDALGO">HIDALGO</option>
+                <option value="JALISCO">JALISCO</option>
+                <option value="ESTADO DE MEXICO">ESTADO DE MEXICO</option>
+                <option value="MICHOACAN">MICHOACAN</option>
+                <option value="MORELOS">MORELOS</option>
+                <option value="NAYARIT">NAYARIT</option>
+                <option value="NUEVO LEON">NUEVO LEON</option>
+                <option value="OAXACA">OAXACA</option>
+                <option value="PUEBLA">PUEBLA</option>
+                <option value="QUERETARO">QUERETARO</option>
+                <option value="QUINTANA-ROO">QUINTANA-ROO</option>
+                <option value="SAN LUIS POTOSI">SAN LUIS POTOSI</option>
+                <option value="SINALOA">SINALOA</option>
+                <option value="SONORA">SONORA</option>
+                <option value="TABASCO">TABASCO</option>
+                <option value="TAMAULIPAS">TAMAULIPAS</option>
+                <option value="TLAXCALA">TLAXCALA</option>
+                <option value="VERACRUZ">VERACRUZ</option>
+                <option value="YUCATAN">YUCATAN</option>
+                <option value="ZACATECAS">ZACATECAS</option>
+
+            </select>
+        </p>
+        <button name="button" id="ejecutar" onclick="Cotizar()">COTIZAR</button>
+    </main>
+</body>
+
+</html>
