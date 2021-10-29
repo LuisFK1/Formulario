@@ -1,25 +1,41 @@
-//Creacion de la clase para posteriormente establecerle la ruta de la imagen y otros atributos
-function Destino(estado,distancia,imagen) {
+//Creación de la clase 
+function Solicitud(Cliente, telefono, niños, adultos, dias, estado, distancia, imagen) {
+    this.Cliente = Cliente;
+    this.telefono = telefono;
+    this.niños = niños;
+    this.adultos = adultos;
+    this.dias = dias;
     this.estado = estado;
     this.distancia = distancia;
     this.imagen = imagen;
 }
 
-
-//obtencion de los elementos mediante el ID esta es la parte disfuncional
+//asignacion de las constantes
+const precioPorKilometro = 150;
+const precioEstanciaNinos = 50;
+const precioEstanciaAdultos = 100;
 const opcion = document.getElementById("opcion");
-const boton = document.getElementById("ejecutar");
-const imagenEstado = document.getElementById("imagen")
+const cuerpo = document.querySelector("body");
 
-//onclick desde javascript
-// boton.onclick = alert("Hola mundo");
 
-//Funcion cotizar la cual es llamada desde el html y 
+//funcion cotizar la cual creara un objeto con todos los detalles de la solicitud, calculara el total y lo mostrara
 function Cotizar() {
-        var textoSeleccionado = [].filter.call(opcion.options, option => option.selected).map(option => option.text);
-        var NumeroSeleccionado = [].filter.call(opcion.options, option => option.selected).map(option => option.value);
-        var ImagenSeleccionada = textoSeleccionado + ".jpg"
-        var lugar = new Destino(textoSeleccionado,NumeroSeleccionado,ImagenSeleccionada);    
-        imagenEstado.src = 'ESTADOS/' + lugar.imagen ;
-        alert(lugar.estado + " " + lugar.distancia + "Km");
+    var solicitud = new Solicitud(
+        document.getElementById("nombreCliente").value,
+        document.getElementById("telefonoCliente").value,
+        document.getElementById("numeroDeNiños").value,
+        document.getElementById("numeroDeAdultos").value,
+        document.getElementById("numeroDeDias").value,
+        [].filter.call(opcion.options, option => option.selected).map(option => option.text),
+        document.getElementById("opcion").value,
+        'ESTADOS/' + [].filter.call(opcion.options, option => option.selected).map(option => option.text) + ".jpg"
+    );
+    cuerpo.textContent = null;
+    document.write(
+        "<h1>Ticket de compra </h1>",
+        "<p>" + "Hola " + solicitud.Cliente +" El costo de transporte sera de $" + (precioPorKilometro * solicitud.distancia) + "</p>",
+        "<p>" + "El costo de hospedaje sera de $" + (((solicitud.niños * precioEstanciaNinos) * solicitud.dias) + ((solicitud.adultos * precioEstanciaAdultos) * solicitud.dias)) + "</p>",
+        "<p>" + "<img src=''" + "alt='imagen de un estado' id='imagenTicket'></img>" + "</p>",
+    );
+    document.getElementById("imagenTicket").src = solicitud.imagen;
 }

@@ -13,16 +13,16 @@
         <h1>COTIZADOR DE VIAJES</h1>
         <p>
             <label for="nombre">NOMBRE CLIENTE</label> <br />
-            <input type="text" name="nombre" placeholder="Nombre(s) Ap. Parter Ap. Materno">
+            <input type="text" name="nombre" placeholder="Nombre(s) Ap. Parter Ap. Materno" id="nombreCliente">
         </p>
         <p>
             <label for="comentarios">CONTACTO DEL CLIENTE</label> <br />
-            <input type="text" name="CONTACT" placeholder="(000)-0000-000">
+            <input type="text" name="CONTACT" placeholder="(000)-0000-000" id="telefonoCliente">
         </p>
 
         <p>
             <label for="ADULTOS">INGRESE LA CANTIDAD DE ADULTOS</label> <br />
-            <select name="ADULTS">
+            <select name="ADULTS" id="numeroDeAdultos">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -37,7 +37,7 @@
         </p>
         <p>
             <label for="NIÑOS">INGRESE LA CANTIDAD DE NIÑOS (0-12 AÑOS)</label> <br />
-            <select name="KIDS">
+            <select name="KIDS" id="numeroDeNiños">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -52,7 +52,7 @@
         </p>
         <p>
             <label for="DIAS">INGRESE LA CANTIDAD DE DIAS DE ESTANCIA</label> <br />
-            <input type="text" name="ESTANCIA" placeholder="DIAS DE SU ESTANCIA">
+            <input type="text" name="ESTANCIA" placeholder="DIAS DE SU ESTANCIA" id="numeroDeDias">
         </p>
 
         <p>
@@ -98,5 +98,4 @@
     </main>
 </body>
 <script src="JS/formulario.js"></script>
-
 </html>
